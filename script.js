@@ -126,3 +126,11 @@ init();
       tooltip.style.display = 'none';
     });
   });
+
+    const form = document.querySelector('.contact-form');
+
+  form.addEventListener('submit', function (event) {
+    setTimeout(() => {
+      form.reset(); // limpa o formulário após envio
+    }, 500); // espera um pouco para o envio ser processado
+  });

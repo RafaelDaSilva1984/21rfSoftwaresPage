@@ -575,3 +575,57 @@ a, .links_navegacao{
   white-space: nowrap;
   z-index: 10;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.contact-form .form-group {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(220, 232, 246, 0.3); 
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #c5bebe;
+  
+}
+
+.contact-form textarea {
+  resize: none;
+  
+}
+
+.contact-form .btn {
+  background: linear-gradient(135deg, #ee52ba, #00b4d8);
+  border: none;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+}
+
+.contact-form .btn:hover {
+  background: linear-gradient(to right, #00d4ff, #023252);
+}
