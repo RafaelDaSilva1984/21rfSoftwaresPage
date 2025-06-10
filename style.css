@@ -17,16 +17,15 @@ body {
   line-height: 1.6;
   position: relative;
   min-height: 100vh;
+  padding: 0 1rem; /* Adiciona um padding lateral */
 }
 a, .links_navegacao{
-  color: #00b4d8; /* Cor do link */
-  text-decoration: none; /* Remove o sublinhado */
+  color:#ee52ba; /* Cor do link */
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
   transition: color 0.3s ease; /* Transição suave para a cor */
 }
-a, .links_navegacao:hover{
-  color: #48cae4; /* Cor do link ao passar o mouse */
-  text-decoration: underline; /* Sublinha o link ao passar o mouse */
-}
+
+
 
 /* Canvas Background */
 #canvas-bg {
@@ -105,7 +104,7 @@ a, .links_navegacao:hover{
 }
 
 .menu a:hover {
-  color: #00b4d8;
+  color: #ee52ba;
   text-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
 }
 
@@ -141,7 +140,7 @@ a, .links_navegacao:hover{
 }
 
 .esquerda h2 {
-  color: #00b4d8;
+  color: #ee52ba;
   margin-bottom: 1.8rem;
   font-weight: 600;
   font-size: 2rem;
@@ -194,7 +193,7 @@ a, .links_navegacao:hover{
 }
 
 .servico h3 {
-  color: #00b4d8;
+  color: #ee52ba;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
   position: relative;
@@ -209,7 +208,7 @@ a, .links_navegacao:hover{
   left: 0;
   width: 30px;
   height: 2px;
-  background: #00b4d8;
+  background:#ee52ba;
 }
 
 .servico p {
@@ -260,15 +259,15 @@ a, .links_navegacao:hover{
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #00b4d8;
-  color: #00b4d8;
+  border: 2px solid #ee52ba;
+  color: #ee52ba;
   box-shadow: none;
 }
 
 .btn-outline:hover {
   background: rgba(0, 180, 216, 0.15);
-  color: #48cae4;
-  border-color: #48cae4;
+  color: #ee52ba;
+  border-color:#ee52ba;
 }
 
 .btn-block {
@@ -297,7 +296,7 @@ a, .links_navegacao:hover{
 }
 
 .footer-col h4 {
-  color: #00b4d8;
+  color: #ee52ba;
   margin-bottom: 1.8rem;
   font-size: 1.3rem;
   position: relative;
@@ -334,7 +333,7 @@ a, .links_navegacao:hover{
 }
 
 .footer-links a:hover {
-  color: #00b4d8;
+  color: #ee52ba;
   transform: translateX(5px);
 }
 
@@ -373,7 +372,7 @@ a, .links_navegacao:hover{
 .footer-form input:focus,
 .footer-form textarea:focus {
   outline: none;
-  border-color: #00b4d8;
+  border-color: #ee52ba;
   background: rgba(187, 203, 222, 0.5);
   box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2);
 }
@@ -384,7 +383,7 @@ a, .links_navegacao:hover{
 }
 
 .footer-form input[type="submit"] {
-  background: linear-gradient(135deg, #00b4d8, #0096c7);
+  background: linear-gradient(135deg, #00b4d8, #ee52ba);
   color: #fff;
   font-weight: 600;
   border: none;
@@ -396,7 +395,7 @@ a, .links_navegacao:hover{
 }
 
 .footer-form input[type="submit"]:hover {
-  background: linear-gradient(135deg, #48cae4, #00b4d8);
+  background: linear-gradient(135deg, #ee52ba, #00b4d8);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4);
 }
@@ -407,17 +406,17 @@ a, .links_navegacao:hover{
   text-align: center;
   padding-top: 1.5rem;
   font-size: 0.9rem;
-  color: #a8b2d1;
+  color: #ee52ba;
 }
 
 #footer-bottom a {
-  color: #00b4d8;
+  color: #e5eef0;
   text-decoration: none;
   transition: all 0.3s;
 }
 
 #footer-bottom a:hover {
-  color: #48cae4;
+  color: #f8d5ec;
   text-decoration: underline;
 }
 
@@ -425,9 +424,9 @@ a, .links_navegacao:hover{
 .footer-carousel {    
   padding: 15px 0;
   overflow: hidden;
-  background: rgba(85, 86, 87, 0.4); 
-  backdrop-filter: blur(6px); 
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(85, 86, 87, 0.1); 
+  backdrop-filter: blur(1px); 
+  -webkit-backdrop-filter: blur(1px);
   margin-bottom: 5rem;
   border-radius: 8px;
 }
@@ -439,21 +438,27 @@ a, .links_navegacao:hover{
 
 .carousel-track {
   display: flex;
-  animation: scroll 35s linear infinite;
+  animation: scroll 120s linear infinite;
   width: max-content;
   
 }
 
 .carousel-item {
   flex: 0 0 auto;
-  margin: 0 40px;
-  padding: 10px;
+  margin: 0 50px;
+  padding: 25px;
   transition: all 0.3s;
   
 }
 
 .carousel-item:hover {
-  transform: scale(1.1);
+  transform: scale(0.75);
+  animation-play-state: paused;  
+  box-shadow: 0 6px 30px rgba(0, 180, 216, 0.5);  
+  background: rgba(27, 38, 59, 0.95);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 180, 216, 0.4); 
+    
 }
 
 .carousel-item img {
@@ -548,4 +553,25 @@ a, .links_navegacao:hover{
   .footer-form textarea {
     padding: 0.8rem;
   }
+}
+
+
+.carousel-item {
+  position: relative;
+  text-align: center;
+}
+
+.tooltip-text {
+  display: none;
+  font-size: 12px;
+  color: #fff;
+  background-color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
 }

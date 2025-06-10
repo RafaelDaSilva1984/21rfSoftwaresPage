@@ -3,14 +3,13 @@ const ctx = canvas.getContext('2d');
 
 let width, height;
 let particles = [];
-let currentColor = 'rgb(244, 247, 248)';
+let currentColor = 'rgb(248, 196, 194)';
 const colors = [
-  'rgb(163, 230, 244)',   // azul claro
-  'rgb(229, 166, 147)',    // laranja
-  'rgb(140, 224, 142)',   // verde
-  'rgb(210, 71, 241)',    // roxo
-  'rgb(242, 243, 157)',   // amarelo
-  'rgb(231, 40, 199)'    // vermelho
+ 
+  
+  'rgb(210, 71, 241)',    
+  'rgb(218, 163, 240)',   
+  'rgb(231, 40, 199)'    
 ];
 
 const shapes = ['circle', 'triangle', 'square', 'rectangle'];
@@ -103,3 +102,27 @@ function changeColor() {
 
 window.addEventListener('resize', resize);
 init();
+
+  const itens = document.querySelectorAll('.carousel-item');
+
+  itens.forEach((item) => {
+    const tooltip = item.querySelector('.tooltip-text');
+
+    // Verifica o link para personalizar a mensagem
+    const link = item.querySelector('a')?.href;
+
+    let texto = 'Clique aqui';
+    if (link.includes('linkedin')) texto = 'Veja meu LinkedIn';
+    else if (link.includes('github')) texto = 'Acesse meu GitHub';
+    else if (link.includes('insta')) texto = 'Me siga no Instagram';
+    else if (link.includes('wa.me')) texto = 'Fale comigo no WhatsApp';
+
+    item.addEventListener('mouseover', () => {
+      tooltip.textContent = texto;
+      tooltip.style.display = 'block';
+    });
+
+    item.addEventListener('mouseout', () => {
+      tooltip.style.display = 'none';
+    });
+  });
