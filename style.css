@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 10rem; /* Adiciona um espaçamento suave ao rolar */
+  scroll-padding: 10.5rem; /* Adiciona um espaçamento suave ao rolar */
 }
 
 body {
@@ -17,15 +17,50 @@ body {
   line-height: 1.6;
   position: relative;
   min-height: 100vh;
-  padding: 0 1rem; /* Adiciona um padding lateral */
+  
 }
 a, .links_navegacao{
   color:#ee52ba; /* Cor do link */
-  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+  text-decoration: none;
   transition: color 0.3s ease; /* Transição suave para a cor */
 }
 
+a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--rosa-principal);
+  outline-offset: 2px;
+}
 
+a.links_navegação_main:hover::after { 
+  content: " Clique Aqui"; /* Texto adicional ao passar o mouse */
+  position: absolute;
+  bottom: -2px; /* Ajusta a posição do texto */
+  left: 15%;
+  transform: translateX(-50%);
+  background-color: rgba(100, 180, 216, 0.4); /* Fundo semi-transparente */
+  color: #f6f1f4; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 0.7rem; /* Tamanho da fonte */
+  display: inline-block; /* Permite definir largura e altura */
+
+
+  
+}
+a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adicional ao passar o mouse */
+  position: absolute;
+  bottom: -2px; /* Ajusta a posição do texto */
+  left: 63.5%;
+  transform: translateX(-50%);
+  background-color: rgba(100, 180, 216, 0.2); /* Fundo semi-transparente */
+  color: #f1f1f6; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 0.7rem; /* Tamanho da fonte */
+  display: inline-block; /* Permite definir largura e altura */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  
+}
 
 /* Canvas Background */
 #canvas-bg {
@@ -61,6 +96,7 @@ a, .links_navegacao{
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 180, 216, 0.2); /* Borda mais visível */
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  
 }
 
 .logo {
@@ -80,6 +116,7 @@ a, .links_navegacao{
   display: flex;
   list-style: none;
   gap: 2rem;
+
 }
 
 .menu a {
@@ -105,12 +142,13 @@ a, .links_navegacao{
 
 .menu a:hover {
   color: #ee52ba;
-  text-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
 }
 
 .menu a:hover::after {
   width: 100%;
 }
+
 
 /* Conteúdo principal */
 .conteudo {
@@ -183,6 +221,7 @@ a, .links_navegacao{
   border: 1px solid rgba(0, 180, 216, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+   position: relative;
 }
 
 .servico:hover {
@@ -190,6 +229,7 @@ a, .links_navegacao{
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
   background: rgba(27, 38, 59, 0.95);
   border-color: rgba(0, 180, 216, 0.4);
+ 
 }
 
 .servico h3 {
@@ -335,6 +375,7 @@ a, .links_navegacao{
 .footer-links a:hover {
   color: #ee52ba;
   transform: translateX(5px);
+  
 }
 
 .footer-contact img {
@@ -536,7 +577,8 @@ a, .links_navegacao{
 
   .esquerda,
   .servicos,
-  .servico {
+  .servico
+   {
     flex: 1 1 100%;
     width: 100%;
   }
@@ -558,6 +600,12 @@ a, .links_navegacao{
     padding: 0.8rem;
     
   }
+  a.links_navegação_footer, a.links_navegação_main {
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+  display: inline-block; /* Permite que o pseudo-elemento funcione corretamente */
+  padding-bottom: 32px; /* Espaço para o pseudo-elemento */
+}
+
 }
 
 
@@ -567,17 +615,17 @@ a, .links_navegacao{
 }
 
 .tooltip-text {
-  display: none;
-  font-size: 12px;
-  color: #fff;
-  background-color: #333;
-  padding: 4px 8px;
-  border-radius: 4px;
-  position: absolute;
+    position: absolute;
   bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
   white-space: nowrap;
+  display: none; /* padrão oculto */
   z-index: 10;
 }
 
@@ -634,3 +682,67 @@ a, .links_navegacao{
 .contact-form .btn:hover {
   background: linear-gradient(to right, #00d4ff, #023252);
 }
+/* Menu padrão desktop */
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Ícone hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 11;
+  border: none;
+  background: transparent;
+  position: relative;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.4s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  a.links_navegação_footer, a.links_navegação_main {
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+  display: inline-block; /* Permite que o pseudo-elemento funcione corretamente */
+  padding-bottom: 42px; /* Espaço para o pseudo-elemento */
+  
+}
+  }
+

@@ -116,6 +116,7 @@ init();
     else if (link.includes('github')) texto = 'Acesse meu GitHub';
     else if (link.includes('insta')) texto = 'Me siga no Instagram';
     else if (link.includes('wa.me')) texto = 'Fale comigo no WhatsApp';
+    else if (link.includes('21rf')) texto = 'Acesse meu site';
 
     item.addEventListener('mouseover', () => {
       tooltip.textContent = texto;
@@ -133,4 +134,21 @@ init();
     setTimeout(() => {
       form.reset(); // limpa o formulário após envio
     }, 500); // espera um pouco para o envio ser processado
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+  });
+});
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
   });
