@@ -484,7 +484,7 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
 
 .carousel-track {
   display: flex;
-  animation: scroll 120s linear infinite;
+  animation: scroll 30s linear infinite;
   width: max-content;
   
 }
@@ -545,16 +545,16 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
     flex-direction: column;
     gap: 1.5rem;
   }
-
-  .topo {
+   .topo {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem;
     text-align: center;
   }
+
   
   .logo {
-    height: 55px;
+    height: 85px;
   }
 
   .esquerda, .servico {
@@ -563,8 +563,12 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
+    margin: auto;
+    /*place-items: center;*/
+    
   }
+ 
 
   .carousel-item {
     margin: 0 25px;
@@ -599,6 +603,7 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
   .footer-form input, 
   .footer-form textarea {
     padding: 0.8rem;
+    
   }
   
   a.links_navegação_footer, a.links_navegação_main {
