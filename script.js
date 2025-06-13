@@ -103,6 +103,7 @@ function changeColor() {
 window.addEventListener('resize', resize);
 init();
 
+/******/
   const itens = document.querySelectorAll('.carousel-item');
 
   itens.forEach((item) => {
@@ -128,6 +129,8 @@ init();
     });
   });
 
+  /******/
+
     const form = document.querySelector('.contact-form');
 
   form.addEventListener('submit', function (event) {
@@ -135,6 +138,9 @@ init();
       form.reset(); // limpa o formulário após envio
     }, 500); // espera um pouco para o envio ser processado
   });
+
+
+  /******/
 
   document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");

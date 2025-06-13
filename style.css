@@ -410,18 +410,23 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
   color: #a8b2d1;
 }
 
+
 .footer-form input:focus,
 .footer-form textarea:focus {
   outline: none;
   border-color: #ee52ba;
   background: rgba(187, 203, 222, 0.5);
   box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2);
+  
 }
 
 .footer-form textarea {
   min-height: 120px;
   resize: vertical;
+  
 }
+
+
 
 .footer-form input[type="submit"] {
   background: linear-gradient(135deg, #00b4d8, #ee52ba);
@@ -595,6 +600,7 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
   .footer-form textarea {
     padding: 0.8rem;
   }
+  
   a.links_navegação_footer, a.links_navegação_main {
   position: relative; /* Necessário para o posicionamento do pseudo-elemento */
   display: inline-block; /* Permite que o pseudo-elemento funcione corretamente */
@@ -644,7 +650,7 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
   border: none;
   border-radius: 6px;
   background: rgba(220, 232, 246, 0.3); 
-  color: #000;
+  color: #f5f2f2;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 
@@ -652,22 +658,22 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #c5bebe;
-  
+  color: #c5bebe;  
 }
 
 .contact-form textarea {
   resize: none;
-  
 }
 
+
+
 .contact-form .btn {
-  background: linear-gradient(135deg, #ee52ba, #00b4d8);
+  background: linear-gradient( -55deg, #ee52ba, #00b4d8);
   border: none;
   padding: 12px;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
+  color:#5a042f;
+  font-style: italic;
+  font-size: 12px;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -675,7 +681,8 @@ a.links_navegação_footer:hover::after { content: " Clique Aqui"; /* Texto adic
 }
 
 .contact-form .btn:hover {
-  background: linear-gradient(to right, #00d4ff, #023252);
+  background:linear-gradient(55deg,#f5f2f2 ,#011420 ,#054d5c );   
+  color:#222121;
 }
 /* Menu padrão desktop */
 .menu ul {
